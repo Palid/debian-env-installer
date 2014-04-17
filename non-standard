@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# NON-STANDARD REPOSITORIES
+# Sublime Text 3
+# sublime-text-installer
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+
+# SPOTIFY
+# spotify-client
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
+
+# Pipelight (Silverlight for linux)
+# pipelight-multi
+sudo apt-add-repository ppa:pipelight/stable
+
+# Calendar Indicator
+# calendar-indicator
+sudo add-apt-repository ppa:atareao/atareao
+
+
+sudo apt-get install aptitude spotify-client sublime-text-installer calendar-indicator pipelight-multi
+
+sudo pipelight-plugin --enable silverlight

@@ -5,32 +5,27 @@ browsers='chromium-browser lynx firefox'
 communicators='irssi skype thunderbird'
 accessories='unrar p7zip-full transmission'
 graphics='gimp gthumb imagemagick simple-scan'
-multimedia='clementine pulseaudio vlc spotify'
+multimedia='clementine pulseaudio vlc'
 important='wget curl sshfs ssh mosh'
 libraries="python python-pip"
 screen='arandr screen'
 remote='x2goclient'
+java='icedtea-7-plugin openjdk-7-jre openjdk-7-jdk'
+RESTRICTED='ubuntu-restricted-extras ubuntu-restricted-addons'
 
 internet="$browsers $communicators"
 
 # FOR DEVELOPMENT
 dev_repo='git git-gui meld'
-dev_util='sublime-text-installer'
 
-# NON-STANDARD REPOSITORIES
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-# SPOTIFY
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
-
-sudo apt-get install aptitude
 
 sudo aptitude update
 sudo aptitude upgrade
 
 # APTITUDE INSTALL
-sudo aptitude install $accessories $graphics $internet $multimedia $dev_repo $dev_util $important $screen $remote
+sudo aptitude install $accessories $graphics $internet $multimedia $dev_repo $dev_util $important $screen $remote $RESTRICTED $java
 
+sudo ./non-standard
 sudo ./node
 sudo ./pip
 
