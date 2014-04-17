@@ -32,3 +32,5 @@ sudo ./pip
 mkdir ~/temp/
 sudo ./download
 sudo ./compile
+
+rm -fr ~/temp
