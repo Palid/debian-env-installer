@@ -1,0 +1,42 @@
+#!/bin/bash
+mkdir ~/temp
+
+#Dropbox
+cd ~/temp/ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
+
+#Brackets.io
+
+cd ~/temp/
+wget https://github.com/adobe/brackets/releases/download/sprint-38/Brackets.Sprint.38.64-bit.deb
+sudo dpkg -i Brackets.Sprint.38.64-bit.deb
+
+# Tilda dropdown terminal
+TildaDEPS="git automake libgtk-3-dev libvte-2.90-dev libconfuse-dev gettext automake autoconf autopoint"
+
+cd ~/temp/
+git clone https://github.com/lanoxx/tilda.git
+cd tilda
+sudo aptitude install $TildaDEPS
+./autogen.sh --prefix=/usr
+make --silent
+sudo make install
+
+# xFreeRDP
+
+RDPDeps1="build-essential git-core cmake libssl-dev libx11-dev libxext-dev libxinerama-dev"
+RDPDeps2="libxcursor-dev libxdamage-dev libxv-dev libxkbfile-dev libasound2-dev libcups2-dev libxml2 libxml2-dev"
+RDPDeps3="libxrandr-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev"
+RDPDeps4="libavutil-dev libavcodec-dev"
+RDPDeps="$RDPDeps1 $RDPDeps2 $RDPDeps3 $RDPDeps4"
+
+sudo aptitude install $RDPDeps
+
+cd ~/temp/
+git clone https://github.com/FreeRDP/FreeRDP.git
+cd FreeRDP
+cmake -DCMAKE_BUILD_TYPE=Debug -DWITH_SSE2=ON .
+make
+sudo make install
+sudo sh -c'echo "/usr/local/lib/freerdp" >> /etc/ld.so.conf.d/freerdp.conf'
+sudo ldconfig
