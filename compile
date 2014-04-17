@@ -1,15 +1,4 @@
 #!/bin/bash
-mkdir ~/temp
-
-#Dropbox
-cd ~/temp/ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
-
-#Brackets.io
-
-cd ~/temp/
-wget https://github.com/adobe/brackets/releases/download/sprint-38/Brackets.Sprint.38.64-bit.deb
-sudo dpkg -i Brackets.Sprint.38.64-bit.deb
 
 # Tilda dropdown terminal
 TildaDEPS="git automake libgtk-3-dev libvte-2.90-dev libconfuse-dev gettext automake autoconf autopoint"
@@ -40,3 +29,7 @@ make
 sudo make install
 sudo sh -c'echo "/usr/local/lib/freerdp" >> /etc/ld.so.conf.d/freerdp.conf'
 sudo ldconfig
+
+cd ~/
+rm -fr ~/temp/
+exit;;

@@ -2,3 +2,5 @@
 helpers='livestreamer'
 
 sudo pip install $helpers
+
+exit;;

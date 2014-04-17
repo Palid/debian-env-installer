@@ -1,11 +1,12 @@
 #!/bin/bash
-node='npm'
 node_linters='jslint jshint'
 node_css='cssmin uncss'
 node_dev='grunt grunt-cli yo bower node-theseus forever'
 
-
+sudo aptitude install node;
 sudo npm install -g n;
 sudo n stable;
 sudo npm update npm -g
 sudo npm install -g $node_linters $node_css $node_dev
+
+exit;;
