@@ -34,3 +34,7 @@ sudo ./download
 sudo ./compile
 
 rm -fr ~/temp
+
+DIR=`pwd`
+
+rm -fr $DIR
