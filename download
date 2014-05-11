@@ -16,4 +16,4 @@ cd ~/temp/
 wget http://media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
 
-exit;;
+exit

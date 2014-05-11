@@ -2,7 +2,7 @@
 
 # STANDARD PACKAGES
 browsers='chromium-browser lynx firefox'
-communicators='irssi skype thunderbird'
+communicators='irssi thunderbird'
 accessories='unrar p7zip-full transmission'
 graphics='gimp gthumb imagemagick simple-scan'
 multimedia='clementine pulseaudio vlc'
@@ -19,11 +19,13 @@ internet="$browsers $communicators"
 dev_repo='git git-gui meld'
 
 
+sudo apt-get install aptitude
+
 sudo aptitude update
 sudo aptitude upgrade
 
 # APTITUDE INSTALL
-sudo aptitude install $accessories $graphics $internet $multimedia $dev_repo $dev_util $important $screen $remote $RESTRICTED $java
+sudo aptitude install $accessories $graphics $internet $multimedia $dev_repo $dev_util $important $screen $remote $RESTRICTED $java $libraries -y
 
 sudo ./non-standard
 sudo ./node
