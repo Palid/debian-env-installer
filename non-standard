@@ -21,8 +21,10 @@ sudo add-apt-repository ppa:atareao/atareao
 
 # Redshift
 # redshift
+# plasma-widget-redshift - PLASMA
+# redshift-gtk - GUI
 sudo add-apt-repository ppa:jonls/redshift-ppa
 
-sudo apt-get install spotify-client sublime-text-installer calendar-indicator pipelight-multi redshift -y
+sudo apt-get install spotify-client sublime-text-installer calendar-indicator pipelight-multi redshift-gtk -y
 
 sudo pipelight-plugin --enable silverlight
