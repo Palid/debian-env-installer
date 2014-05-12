@@ -17,7 +17,14 @@ sudo apt-add-repository ppa:pipelight/stable
 
 # Calendar Indicator
 # calendar-indicator
-sudo add-apt-repository ppa:atareao/atareao
+#sudo add-apt-repository ppa:atareao/atareao
+
+# Screencloud (something like puu.sh for Linux)
+# screencloud
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/olav-st/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/screencloud.list"
+cd ~/tmp/
+wget http://download.opensuse.org/repositories/home:olav-st/xUbuntu_14.04/Release.key
+sudo apt-key add - < Release.key
 
 # Redshift
 # redshift
@@ -25,6 +32,6 @@ sudo add-apt-repository ppa:atareao/atareao
 # redshift-gtk - GUI
 sudo add-apt-repository ppa:jonls/redshift-ppa
 
-sudo apt-get install spotify-client sublime-text-installer calendar-indicator pipelight-multi redshift-gtk -y
+sudo apt-get install spotify-client sublime-text-installer pipelight-multi screencloud redshift-gtk  -y
 
 sudo pipelight-plugin --enable silverlight
