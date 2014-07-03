@@ -8,12 +8,8 @@ sudo add-apt-repository ppa:webupd8team/sublime-text-3
 # SPOTIFY
 # spotify-client
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-sudo rm -f /etc/apt/sourced.list.d/spotify.list
+sudo rm -f /etc/apt/sources.list.d/spotify.list
 sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
-
-# Pipelight (Silverlight for linux)
-# pipelight-multi
-sudo apt-add-repository ppa:pipelight/stable
 
 # Screencloud (something like puu.sh for Linux)
 # screencloud
