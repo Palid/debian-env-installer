@@ -5,13 +5,11 @@ browsers='chromium-browser links2 firefox'
 communicators='irssi thunderbird'
 accessories='unrar p7zip-full transmission'
 graphics='gimp gthumb imagemagick simple-scan'
-multimedia='clementine pulseaudio vlc'
-important='wget curl sshfs ssh mosh dropbox'
+multimedia='clementine'
+important='wget curl mosh'
 libraries="python python-pip"
 screen='arandr screen'
-remote='x2goclient'
-java='icedtea-7-plugin openjdk-7-jre openjdk-7-jdk'
-RESTRICTED='ubuntu-restricted-extras ubuntu-restricted-addons'
+RESTRICTED='lubuntu-restricted-extras lubuntu-restricted-addons'
 
 internet="$browsers $communicators"
 
@@ -22,6 +20,8 @@ svn='subversion'
 xterm_colors='ncurses-term'
 #Remember to set #export TERM=xterm-256color in ~/.bashrc
 sudo apt-get install aptitude
+
+sudo apt-get install aptitude -y
 
 sudo aptitude update
 sudo aptitude upgrade -y
