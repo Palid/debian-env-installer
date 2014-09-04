@@ -18,7 +18,8 @@ internet="$browsers $communicators"
 # FOR DEVELOPMENT
 dev_repo='git git-gui meld'
 
-
+xterm_colors='ncurses-term'
+#Remember to set #export TERM=xterm-256color in ~/.bashrc
 sudo apt-get install aptitude
 
 sudo aptitude update
