@@ -1,16 +1,5 @@
 #!/bin/bash
 
-#xFlux
-cd ~/temp/ && wget -O - "https://justgetflux.com/linux/xflux64.tgz"  |  tar xzf - ~/scripts/
-wget https://gist.githubusercontent.com/Palid/7ab28452755100035e27/raw/f75fff225dd2ab80afa8508f1c8df093d3b7306f/gistfile1.txt -O ~/scripts/xflux.sh
-chmod +x ~/scripts/xflux.sh
-~/scripts/xflux.sh
-
-#Brackets.io
-cd ~/temp/
-wget https://github.com/adobe/brackets/releases/download/sprint-38/Brackets.Sprint.38.64-bit.deb
-sudo dpkg -i Brackets.Sprint.38.64-bit.deb
-
 #Steam
 cd ~/temp/
 wget http://media.steampowered.com/client/installer/steam.deb

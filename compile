@@ -1,16 +1,5 @@
 #!/bin/bash
-
-# Tilda dropdown terminal
-TildaDEPS="git automake libgtk-3-dev libvte-2.90-dev libconfuse-dev gettext automake autoconf autopoint"
-
-cd ~/temp/
-git clone https://github.com/lanoxx/tilda.git
-cd tilda
-sudo aptitude install $TildaDEPS
-./autogen.sh --prefix=/usr
-make --silent
-sudo make install
-
+#
 # xFreeRDP
 
 RDPDeps1="build-essential git-core cmake libssl-dev libx11-dev libxext-dev libxinerama-dev"
